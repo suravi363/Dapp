@@ -5,157 +5,155 @@ import './App.css';
 function App() {
   const CONTRACT_ADDRESS = "0xd8b934580fcE35a11B58C6D73aDeE468a2833fa8";
   const ABI = [
-    
-      {
-        "inputs": [
-          {
-            "internalType": "string",
-            "name": "_name",
-            "type": "string"
-          },
-          {
-            "internalType": "uint256",
-            "name": "_price",
-            "type": "uint256"
-          }
-        ],
-        "name": "listItem",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_id",
-            "type": "uint256"
-          }
-        ],
-        "name": "purchaseItem",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "_id",
-            "type": "uint256"
-          },
-          {
-            "internalType": "address",
-            "name": "_to",
-            "type": "address"
-          }
-        ],
-        "name": "transferItem",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "_owner",
-            "type": "address"
-          }
-        ],
-        "name": "getItemsByOwner",
-        "outputs": [
-          {
-            "internalType": "uint256[]",
-            "name": "",
-            "type": "uint256[]"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [],
-        "name": "itemCount",
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "name": "items",
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "id",
-            "type": "uint256"
-          },
-          {
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "internalType": "uint256",
-            "name": "price",
-            "type": "uint256"
-          },
-          {
-            "internalType": "address payable",
-            "name": "seller",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "owner",
-            "type": "address"
-          },
-          {
-            "internalType": "bool",
-            "name": "isSold",
-            "type": "bool"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "inputs": [
-          {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "name": "ownedItems",
-        "outputs": [
-          {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-      }
-    
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_price",
+          "type": "uint256"
+        }
+      ],
+      "name": "listItem",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "purchaseItem",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "transferItem",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "getItemsByOwner",
+      "outputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "itemCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "items",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address payable",
+          "name": "seller",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "isSold",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownedItems",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
   ];
   
   const [provider, setProvider] = useState(null);
@@ -299,37 +297,6 @@ function App() {
         )}>
           List Item
         </button>
-      </div>
-
-      <div className="items">
-        <h2>Items for Sale</h2>
-        {items.map((item) => (
-          <div key={item.id} className="item-card">
-            <p><strong>Name:</strong> {item.name}</p>
-            <p><strong>Price:</strong> {ethers.utils.formatEther(item.price)} ETH</p>
-            <p><strong>Owner:</strong> {item.owner}</p>
-            {!item.isSold && item.owner.toLowerCase() !== account.toLowerCase() && (
-              <button className="button" onClick={() => purchaseItem(item.id, ethers.utils.formatEther(item.price))}>
-                Purchase
-              </button>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div className="owned-items">
-        <h2>Your Items</h2>
-        {ownedItems.map((item) => (
-          <div key={item.id} className="item-card">
-            <p><strong>Name:</strong> {item.name}</p>
-            <p><strong>Price:</strong> {ethers.utils.formatEther(item.price)} ETH</p>
-            <p><strong>Owner:</strong> {item.owner}</p>
-            <input id={`transferAddress${item.id}`} placeholder="Transfer to Address" className="input-field" />
-            <button className="button" onClick={() => transferItem(item.id, document.getElementById(`transferAddress${item.id}`).value)}>
-              Transfer
-            </button>
-          </div>
-        ))}
       </div>
     </div>
   );
