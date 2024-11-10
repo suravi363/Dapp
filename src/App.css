@@ -29,16 +29,16 @@ h1 {
   color: #fff;
   font-size: 2.8em;
   font-weight: bold;
-  margin: 2rem 0; /* Space at the top */
+  margin: 2rem 0; 
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add a subtle text shadow for depth */
-  text-align: center; /* Center the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+  text-align: center; 
 }
 
-/* Listing Section */
+
 .list-item {
-  background-color: rgba(255, 255, 255, 0.9);  /* Slightly less transparency */
+  background-color: rgba(255, 255, 255, 0.9);  
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@ h1 {
   color: #4b5563;
   margin-bottom: 1.2rem;
   text-transform: capitalize;
-  letter-spacing: 1px;  /* Add letter-spacing for a clean look */
+  letter-spacing: 1px;  
 }
 
 /* Input Fields */
@@ -103,7 +103,7 @@ h1 {
   box-shadow: 0 0 12px rgba(99, 102, 241, 0.7);
 }
 
-/* Item Display Section */
+
 .items, .owned-items {
   display: flex;
   justify-content: center;
@@ -115,7 +115,7 @@ h1 {
   margin: 0 auto;
 }
 
-/* Footer Styling */
+
 .footer {
   margin-top: 3rem;
   color: #fff;
