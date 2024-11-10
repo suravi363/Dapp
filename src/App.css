@@ -1,84 +1,213 @@
-/* Main App Styling */
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  background: linear-gradient(135deg, #8ec5fc, #e0c3fc); 
+/* General Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, .App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff7a18, #af002d, #2a2a72);
   color: #333;
+  padding: 20px;
 }
 
-
+/* Header Styling */
 h1 {
-  color: #1f2937; 
-  margin-bottom: 20px;
-  font-size: 2em;
+  color: #fff;
+  font-size: 2.8em;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Add a subtle text shadow for depth */
 }
 
-
-.list-item, .items, .owned-items {
-  margin-bottom: 30px;
+/* Listing Section */
+.list-item {
+  background-color: rgba(255, 255, 255, 0.9);  /* Slightly less transparency */
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s ease;
 }
 
+.list-item:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
 
+.list-item h2 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #4b5563;
+  margin-bottom: 1.2rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;  /* Add letter-spacing for a clean look */
+}
+
+/* Input Fields */
 .input-field {
-  margin: 5px;
-  padding: 12px;
-  font-size: 16px;
-  width: 260px;
+  margin: 0.8rem 0;
+  padding: 0.8rem;
+  font-size: 1rem;
+  width: 100%;
   border: 1px solid #d1d5db;
-  border-radius: 6px;
-  transition: border-color 0.3s;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .input-field:focus {
   outline: none;
-  border-color: #6366f1; 
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
 }
 
-
+/* Button Styling */
 .button {
-  margin-top: 12px;
-  padding: 12px 24px;
-  font-size: 16px;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
   color: #fff;
-  background: linear-gradient(90deg, #6366f1, #7c3aed); 
+  background: linear-gradient(90deg, #6366f1, #7c3aed);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s ease;
 }
 
 .button:hover {
-  background: linear-gradient(90deg, #4c51bf, #5b21b6); 
+  background: linear-gradient(90deg, #4c51bf, #5b21b6);
+  transform: translateY(-2px);
 }
 
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.7);
+}
 
+/* Item Cards */
 .item-card {
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid #d1d5db;
-  padding: 20px;
-  margin: 15px;
+  padding: 1.5rem;
   border-radius: 10px;
-  background-color: #ffffffbb; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
-  display: inline-block;
-  width: 380px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s ease;
 }
 
 .item-card:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-
-.item-card p {
-  margin: 8px 0;
-  color: #374151; 
+.item-card .item-header {
+  font-size: 1.4em;
+  color: #374151;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-strong {
-  color: #4b5563; 
+.item-card .item-price {
+  font-size: 1.2em;
+  color: #6366f1;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.item-card .item-description {
+  color: #6b7280;
+  font-size: 1rem;
+  margin-top: 10px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Item Card Button */
+.item-card .card-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #7c3aed;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.item-card .card-button:hover {
+  background-color: #5b21b6;
+  transform: translateY(-2px);
+}
+
+.item-card .card-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.7);
+}
+
+/* Item Display Section */
+.items, .owned-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Footer Styling */
+.footer {
+  margin-top: 3rem;
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .list-item, .item-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .footer {
+    font-size: 0.8em;
+  }
+
+  .button {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .list-item, .item-card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .footer {
+    font-size: 0.7em;
+  }
 }
