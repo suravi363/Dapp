@@ -30,20 +30,14 @@ contract Marketplace {
         require(msg.value == item.price, "Incorrect price");
         require(!item.isSold, "Item already sold");
         require(msg.sender != item.seller, "Seller cannot buy their own item");
-
         item.isSold = true;
         item.seller.transfer(msg.value);
-
-        // Transfer ownership
         _transferOwnership(_id, item.seller, msg.sender);
 
     }
-
     function _transferOwnership(uint _id, address _from, address _to) internal {
         Item storage item = items[_id];
         item.owner = _to;
-
-        // Remove item from the previous owner's list
         uint[] storage fromItems = ownedItems[_from];
         for (uint i = 0; i < fromItems.length; i++) {
             if (fromItems[i] == _id) {
@@ -52,8 +46,6 @@ contract Marketplace {
                 break;
             }
         }
-
-        // Add item to the new owner's list
         ownedItems[_to].push(_id);
     }
 
