@@ -233,14 +233,9 @@ function App() {
   const listItem = async (name, price) => {
     if (!contract) return;
     try {
-      // Listing the item
       const tx = await contract.listItem(name, ethers.utils.parseEther(price));
       console.log("Listing item transaction sent:", tx);
-      
-      // Wait for the transaction to be confirmed
       await tx.wait();
-      
-      // Refresh items after the transaction
       await refreshItems();
       console.log("Item listed and state refreshed!");
     } catch (error) {
@@ -251,14 +246,10 @@ function App() {
   const purchaseItem = async (id, price) => {
     if (!contract) return;
     try {
-      // Purchasing the item
+      
       const tx = await contract.purchaseItem(id, { value: ethers.utils.parseEther(price) });
       console.log("Purchase item transaction sent:", tx);
-      
-      // Wait for the transaction to be confirmed
       await tx.wait();
-      
-      // Refresh items after the transaction
       await refreshItems();
       console.log("Item purchased and state refreshed!");
     } catch (error) {
@@ -269,14 +260,9 @@ function App() {
   const transferItem = async (id, toAddress) => {
     if (!contract) return;
     try {
-      // Transferring the item
       const tx = await contract.transferItem(id, toAddress);
       console.log("Transfer item transaction sent:", tx);
-      
-      // Wait for the transaction to be confirmed
       await tx.wait();
-      
-      // Refresh items after the transaction
       await refreshItems();
       console.log("Item transferred and state refreshed!");
     } catch (error) {
