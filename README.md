@@ -42,14 +42,16 @@ This command removes the Create React App build dependency and copies configurat
    ```bash
    git clone https://github.com/your-username/your-repo-name.git
    cd your-repo-name
-Install dependencies:
-  npm install
+   Install dependencies:
+      npm install
 
-Usage
-To start the application, run:
-  npm start
+## Usage
+2. Usage
+   To start the application, run:
+     npm start
 
-Build and Deployment
+## Build and Deployment
+3. Build and Deployment
   To build the project for production, use:
-  npm run build
+     npm run build
   This creates an optimized production build in the build folder, ready to be deployed.
