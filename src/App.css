@@ -1,0 +1,84 @@
+/* Main App Styling */
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: linear-gradient(135deg, #8ec5fc, #e0c3fc); 
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+
+h1 {
+  color: #1f2937; 
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+
+.list-item, .items, .owned-items {
+  margin-bottom: 30px;
+}
+
+
+.input-field {
+  margin: 5px;
+  padding: 12px;
+  font-size: 16px;
+  width: 260px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6366f1; 
+}
+
+
+.button {
+  margin-top: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(90deg, #6366f1, #7c3aed); 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #4c51bf, #5b21b6); 
+}
+
+
+.item-card {
+  border: 1px solid #d1d5db;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #ffffffbb; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: inline-block;
+  width: 380px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.item-card p {
+  margin: 8px 0;
+  color: #374151; 
+}
+
+strong {
+  color: #4b5563; 
+}
